@@ -12,7 +12,6 @@ public class CopyExampleTest {
         person2.name = "Jane";
         person2.address.city = "Los Angeles";
 
-        // Test to verify shallow copy affects original object
         assertEquals("Jane", person2.name);
         assertEquals("Los Angeles", person2.address.city);
         assertEquals("Los Angeles", person1.address.city);
@@ -27,7 +26,6 @@ public class CopyExampleTest {
         person3.name = "Mike";
         person3.address.city = "San Francisco";
 
-        // Test to verify deep copy does not affect original object
         assertEquals("Mike", person3.name);
         assertEquals("San Francisco", person3.address.city);
         assertEquals("John", person1.name);

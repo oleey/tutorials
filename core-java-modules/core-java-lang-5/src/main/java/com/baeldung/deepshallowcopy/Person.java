@@ -7,13 +7,11 @@ public class Person implements Cloneable {
         this.address = address;
     }
 
-    // Shallow copy
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 
-    // Deep copy
     protected Person deepClone() {
         return new Person(this.name, new Address(this.address.city));
     }
